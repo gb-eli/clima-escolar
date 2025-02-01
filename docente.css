@@ -71,7 +71,7 @@ button:focus {
     outline: none;
 }
 
-textarea {
+textarea, input[type="text"] {
     width: 100%;
     max-width: 100%;
     padding: 10px;
@@ -82,7 +82,7 @@ textarea {
 }
 
 @media (max-width: 768px) {
-    textarea {
+    textarea, input[type="text"] {
         font-size: 14px;
     }
 }
