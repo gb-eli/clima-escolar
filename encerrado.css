@@ -26,6 +26,11 @@ body {
     text-align: center;
 }
 
+.logo {
+    max-width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 20px;
+}
+
 h1 {
     color: #d9534f;
     margin-bottom: 15px;
