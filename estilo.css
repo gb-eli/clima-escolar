@@ -81,11 +81,11 @@ button:focus {
 .contador {
     font-size: 24px;
     font-weight: bold;
-    color: red;
+    color: black;
+    background-color: #f39c12;
     margin-top: 20px;
     padding: 10px;
-    background-color: #fff;
-    border: 2px solid #2980B9;
+    border: 2px solid #e67e22;
     border-radius: 5px;
     display: inline-block;
 }
