@@ -1,13 +1,16 @@
 function atualizarContagemRegressiva() {
     // Definir a data de encerramento: 03/02/2025 às 09:00 no horário de Brasília
     const encerramento = new Date('2025-02-03T09:00:00-03:00').getTime();
+    const contador = document.getElementById("contador");
 
     function atualizar() {
         const agora = new Date().getTime();
         const diferenca = encerramento - agora;
 
         if (diferenca <= 0) {
-            document.getElementById("contador").innerHTML = "A pesquisa foi encerrada.";
+            contador.innerHTML = "A pesquisa foi encerrada.";
+            contador.style.backgroundColor = "red";
+            contador.style.color = "white";
             return;
         }
 
@@ -15,7 +18,14 @@ function atualizarContagemRegressiva() {
         const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
         const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
 
-        document.getElementById("contador").innerHTML = `Tempo restante: ${horas}h ${minutos}m ${segundos}s`;
+        contador.innerHTML = `Tempo restante: ${horas}h ${minutos}m ${segundos}s`;
+
+        // Adiciona a classe de piscar se faltar menos de 10 minutos
+        if (horas === 0 && minutos < 10) {
+            contador.classList.add("piscar");
+        } else {
+            contador.classList.remove("piscar");
+        }
     }
 
     atualizar();
