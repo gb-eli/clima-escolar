@@ -1,3 +1,4 @@
+/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +21,12 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    max-width: 200px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 20px;
 }
 
 header h1 {
@@ -72,29 +79,6 @@ button:focus {
     outline: none;
 }
 
-/* Estilização do contador regressivo */
-.contador {
-    font-weight: bold;
-    font-size: 24px;
-    background-color: yellow;
-    color: red;
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-/* Animação de piscar quando restarem menos de 10 minutos */
-@keyframes piscar {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.piscar {
-    animation: piscar 1s infinite;
-}
-
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -119,10 +103,5 @@ button:focus {
     button {
         font-size: 16px;
         padding: 10px 20px;
-    }
-
-    .contador {
-        font-size: 20px;
-        padding: 8px 15px;
     }
 }
