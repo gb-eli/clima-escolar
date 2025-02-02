@@ -57,6 +57,18 @@ header h2 {
     font-weight: bold;
 }
 
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.content ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
 button {
     margin-top: 30px;
     padding: 12px 25px;
