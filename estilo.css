@@ -72,12 +72,27 @@ button:focus {
     outline: none;
 }
 
-/* Estilos para o contador regressivo */
+/* Estilização do contador regressivo */
 .contador {
     font-weight: bold;
+    font-size: 24px;
+    background-color: yellow;
     color: red;
-    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
     margin-top: 20px;
+}
+
+/* Animação de piscar quando restarem menos de 10 minutos */
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.piscar {
+    animation: piscar 1s infinite;
 }
 
 @media (max-width: 768px) {
@@ -104,5 +119,10 @@ button:focus {
     button {
         font-size: 16px;
         padding: 10px 20px;
+    }
+
+    .contador {
+        font-size: 20px;
+        padding: 8px 15px;
     }
 }
